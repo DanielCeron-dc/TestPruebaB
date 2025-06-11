@@ -1,0 +1,21 @@
+<div class="custom-input">
+    <label>
+        {{ label }}
+        <span *ngIf="required" class="required">*</span>
+    </label>
+
+    <ng-container [ngSwitch]="type">
+        <input *ngSwitchCase="'text'" [(ngModel)]="value" (ngModelChange)="onValueChange()" [placeholder]="placeholder"
+            class="input" />
+
+        <textarea *ngSwitchCase="'textarea'" [(ngModel)]="value" [placeholder]="placeholder" (ngModelChange)="onValueChange()"
+            class="input textarea"></textarea>
+
+        <select *ngSwitchCase="'dropdown'" [(ngModel)]="value" class="input" (ngModelChange)="onValueChange()">
+            <option value="" disabled selected>{{ placeholder }}</option>
+            <option *ngFor="let option of options" [value]="option.value">
+                {{ option.text }}
+            </option>
+        </select>
+    </ng-container>
+</div>

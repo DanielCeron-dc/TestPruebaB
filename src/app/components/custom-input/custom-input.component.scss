@@ -1,0 +1,35 @@
+.custom-input {
+  font-family: Arial, sans-serif;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  color: #344563;
+  margin-bottom: 4px;
+}
+
+.required {
+  color: red;
+  margin-left: 2px;
+}
+
+.input {
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #c1c7d0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #172B4D;
+}
+
+.input::placeholder {
+  color: #A5ADBA;
+}
+
+.textarea {
+  min-height: 80px;
+  resize: vertical;
+}
