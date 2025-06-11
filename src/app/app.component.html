@@ -1,0 +1,9 @@
+<h1>TEST EFICACIA LIBRARY</h1>
+
+<button (click)="showModal = true">Abrir modal</button>
+
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal-content">
+    <app-card-custom></app-card-custom>
+  </div>
+</div>

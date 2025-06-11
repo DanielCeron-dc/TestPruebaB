@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './custom-header.component.html',
-  styleUrls: ['./custom-header.component.css'],
+  styleUrls: ['./custom-header.component.scss'],
 })
 export class CustomHeaderComponent {
   @Input() title: string = '';

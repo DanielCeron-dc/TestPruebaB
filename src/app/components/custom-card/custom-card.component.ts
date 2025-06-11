@@ -13,7 +13,7 @@ import { CustomButtonComponent } from '../custom-button/custom-button.component'
     CustomCheckboxComponent,
     CustomButtonComponent,
   ],
-  templateUrl: './card-custom.component.html',
+  templateUrl: './custom-card.component.html',
 })
 export class CardCustomComponent {
   nombre = '';

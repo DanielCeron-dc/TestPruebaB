@@ -6,6 +6,8 @@
   [description]="'Es el proceso de evaluar cuán involucradas están las personas en una actividad, usando indicadores como asistencia, interacciones o aportes. Se recogen datos, se analizan y se obtiene un resultado que ayuda a mejorar el compromiso y la estrategia.'">
 </app-custom-header>
 
+<br/>
+
 <app-custom-input
   [label]="'Nombre de la medición'"
   [placeholder]="'Inserte el nombre'"
@@ -14,12 +16,16 @@
   (valueChange)="nombre = $event">
 </app-custom-input>
 
+<br/>
+
 <app-custom-input
   [label]="'Descripción de la medición'"
   [placeholder]="'Inserte comentarios u observaciones'"
   [type]="'textarea'"
   (valueChange)="descripcion = $event">
 </app-custom-input>
+
+<br/>
 
 <app-custom-input
   [label]="'Estado'"
@@ -30,11 +36,13 @@
   (valueChange)="estado = $event">
 </app-custom-input>
 
-<app-custom-checkbox
+<app-custom-checkbox  
   [title]="'Configuración especial'"
   [label]="'Implementación obligatoria'"
   (checkboxChange)="implementacionObligatoria = $event">
 </app-custom-checkbox>
+
+<br/>
 
 <app-custom-button
   [label]="'Crear medición'"

@@ -1,11 +1,17 @@
 <div style="font-family: Arial, sans-serif;">
-  <h4 style="color: #0052CC;">{{ title }}</h4>
+  <h4 style="color: #0052CC; font-weight: bold;">{{ title }}</h4>
   <label style="display: flex; align-items: center; color: #6b778c; font-size: 14px;">
     <input
       type="checkbox"
       [(ngModel)]="isChecked"
       (change)="onChange()"
-      style="margin-right: 8px;"
+      style="
+        margin-right: 8px;
+        width: 18px;
+        height: 18px;
+        accent-color: #0052CC;
+        cursor: pointer;
+      "
     />
     {{ label }}
   </label>

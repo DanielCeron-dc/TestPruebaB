@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CardCustomComponent } from '../app/components/custom-card/custom-card.component'; 
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,11 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
+    CardCustomComponent,
   ],
-  template: `
-    <h1>TEST EFICACIA LIBRARY</h1>
-  `,
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {}
+export class AppComponent {
+  showModal = false;
+}
