@@ -1,0 +1,51 @@
+<div class="my-3 mx-3">
+
+<app-custom-header
+  [title]="'Crear una medición'"
+  [subtitle]="'Permita de nuevas mediciones de participación'"
+  [description]="'Es el proceso de evaluar cuán involucradas están las personas en una actividad, usando indicadores como asistencia, interacciones o aportes. Se recogen datos, se analizan y se obtiene un resultado que ayuda a mejorar el compromiso y la estrategia.'">
+</app-custom-header>
+
+<app-custom-input
+  [label]="'Nombre de la medición'"
+  [placeholder]="'Inserte el nombre'"
+  [required]="true"
+  [type]="'text'"
+  (valueChange)="nombre = $event">
+</app-custom-input>
+
+<app-custom-input
+  [label]="'Descripción de la medición'"
+  [placeholder]="'Inserte comentarios u observaciones'"
+  [type]="'textarea'"
+  (valueChange)="descripcion = $event">
+</app-custom-input>
+
+<app-custom-input
+  [label]="'Estado'"
+  [placeholder]="'Activo'"
+  [required]="true"
+  [type]="'dropdown'"
+  [options]="estados"
+  (valueChange)="estado = $event">
+</app-custom-input>
+
+<app-custom-checkbox
+  [title]="'Configuración especial'"
+  [label]="'Implementación obligatoria'"
+  (checkboxChange)="implementacionObligatoria = $event">
+</app-custom-checkbox>
+
+<app-custom-button
+  [label]="'Crear medición'"
+  [type]="'primary'"
+  (clicked)="crear()">
+</app-custom-button>
+
+<app-custom-button
+  [label]="'Cancelar creación'"
+  [type]="'secondary'"
+  (clicked)="cancelar()">
+</app-custom-button>
+
+</div>
