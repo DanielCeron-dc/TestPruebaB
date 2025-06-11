@@ -1,9 +1,11 @@
-<h1>TEST EFICACIA LIBRARY</h1>
+<div class="epic-page">
+  <h1 class="epic-title">ABRIR MODAL</h1>
+  <button class="epic-button" (click)="openModal()">Open Modal</button>
 
-<button (click)="showModal = true">Abrir modal</button>
-
-<div class="modal-overlay" *ngIf="showModal">
-  <div class="modal-content">
-    <app-card-custom></app-card-custom>
+  <div class="modal-overlay" *ngIf="showModal" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closeModal()">×</button>
+      <app-card-custom (close)="closeModal()"> </app-card-custom>
+    </div>
   </div>
 </div>

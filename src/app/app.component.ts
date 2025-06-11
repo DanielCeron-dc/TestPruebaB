@@ -16,4 +16,12 @@ import { CardCustomComponent } from '../app/components/custom-card/custom-card.c
 })
 export class AppComponent {
   showModal = false;
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
+  }
 }
